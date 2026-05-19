@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar__logo">
+      <div class="logo-mark"></div>
+      <span class="logo-text">BrandCo</span>
+    </div>
+    <nav class="sidebar__nav">
+      <a href="#" class="nav-item nav-item--active">
+        <span class="nav-icon">&#9632;</span> Overview
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">&#9650;</span> Analytics
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">&#9679;</span> Reports
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">&#9670;</span> Projects
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">&#9733;</span> Settings
+      </a>
+    </nav>
+  </div>
+
+  <!-- Main content -->
+  <div class="main" id="main">
+    <!-- Top bar -->
+    <header class="topbar">
+      <button class="topbar__toggle" id="sidebarToggle" aria-label="Toggle sidebar">&#9776;</button>
+      <div class="topbar__title">Overview</div>
+      <div class="topbar__actions">
+        <span class="badge badge--yellow">3 Alerts</span>
+        <div class="avatar">JD</div>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="content">
+      <!-- Stat cards -->
+      <section class="stats-grid" aria-label="Key metrics">
+        <div class="card stat-card">
+          <div class="stat-card__label">Total Revenue</div>
+          <div class="stat-card__value">$128,430</div>
+          <div class="stat-card__change stat-card__change--up">&#9650; 12.4% vs last month</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-card__label">Active Users</div>
+          <div class="stat-card__value">4,821</div>
+          <div class="stat-card__change stat-card__change--up">&#9650; 8.1% vs last month</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-card__label">New Projects</div>
+          <div class="stat-card__value">37</div>
+          <div class="stat-card__change stat-card__change--down">&#9660; 2.3% vs last month</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-card__label">Open Tickets</div>
+          <div class="stat-card__value">14</div>
+          <div class="stat-card__change stat-card__change--up">&#9650; Resolved 5 today</div>
+        </div>
+      </section>
+
+      <!-- Chart + Activity -->
+      <section class="mid-grid">
+        <!-- Bar chart (CSS-only) -->
+        <div class="card chart-card">
+          <div class="card__header">
+            <h2 class="card__title">Monthly Revenue</h2>
+            <span class="chip">2026</span>
+          </div>
+          <div class="bar-chart" aria-label="Monthly revenue bar chart">
+            <div class="bar-chart__bars">
+              <div class="bar-group">
+                <div class="bar" style="--h:55%" title="Jan: $55k"></div>
+                <span class="bar-label">Jan</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--h:70%" title="Feb: $70k"></div>
+                <span class="bar-label">Feb</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--h:48%" title="Mar: $48k"></div>
+                <span class="bar-label">Mar</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--h:82%" title="Apr: $82k"></div>
+                <span class="bar-label">Apr</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar bar--accent" style="--h:95%" title="May: $95k"></div>
+                <span class="bar-label">May</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--h:63%" title="Jun: $63k"></div>
+                <span class="bar-label">Jun</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent activity -->
+        <div class="card activity-card">
+          <div class="card__header">
+            <h2 class="card__title">Recent Activity</h2>
+            <a href="#" class="link">View all</a>
+          </div>
+          <ul class="activity-list">
+            <li class="activity-item">
+              <div class="activity-dot activity-dot--blue"></div>
+              <div class="activity-body">
+                <span class="activity-text">New report generated</span>
+                <span class="activity-time">2 min ago</span>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-dot activity-dot--yellow"></div>
+              <div class="activity-body">
+                <span class="activity-text">Budget alert triggered</span>
+                <span class="activity-time">18 min ago</span>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-dot activity-dot--orange"></div>
+              <div class="activity-body">
+                <span class="activity-text">Project Alpha deadline updated</span>
+                <span class="activity-time">1 hr ago</span>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-dot activity-dot--blue"></div>
+              <div class="activity-body">
+                <span class="activity-text">5 new users registered</span>
+                <span class="activity-time">3 hr ago</span>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-dot activity-dot--gray"></div>
+              <div class="activity-body">
+                <span class="activity-text">System maintenance completed</span>
+                <span class="activity-time">Yesterday</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects table -->
+      <section class="card table-card">
+        <div class="card__header">
+          <h2 class="card__title">Projects</h2>
+          <button class="btn btn--primary">+ New Project</button>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table" aria-label="Projects table">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Owner</th>
+                <th>Status</th>
+                <th>Progress</th>
+                <th>Due Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Brand Refresh</td>
+                <td>Alice M.</td>
+                <td><span class="status status--active">Active</span></td>
+                <td>
+                  <div class="progress-bar"><div class="progress-bar__fill" style="--p:72%"></div></div>
+                  <span class="progress-label">72%</span>
+                </td>
+                <td>Jun 30, 2026</td>
+              </tr>
+              <tr>
+                <td>Mobile App v2</td>
+                <td>Bob K.</td>
+                <td><span class="status status--review">In Review</span></td>
+                <td>
+                  <div class="progress-bar"><div class="progress-bar__fill" style="--p:90%"></div></div>
+                  <span class="progress-label">90%</span>
+                </td>
+                <td>May 25, 2026</td>
+              </tr>
+              <tr>
+                <td>Data Pipeline</td>
+                <td>Carol S.</td>
+                <td><span class="status status--active">Active</span></td>
+                <td>
+                  <div class="progress-bar"><div class="progress-bar__fill" style="--p:45%"></div></div>
+                  <span class="progress-label">45%</span>
+                </td>
+                <td>Jul 15, 2026</td>
+              </tr>
+              <tr>
+                <td>API Integration</td>
+                <td>Dan R.</td>
+                <td><span class="status status--hold">On Hold</span></td>
+                <td>
+                  <div class="progress-bar"><div class="progress-bar__fill" style="--p:30%"></div></div>
+                  <span class="progress-label">30%</span>
+                </td>
+                <td>Aug 01, 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

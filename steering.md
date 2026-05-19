@@ -1,0 +1,3 @@
+- Follow branding-rules.md
+- Use responsive UI
+- Use reusable components
